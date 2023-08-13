@@ -1,12 +1,13 @@
-<div class="app">
-  <div class="app__overlay" [class.visible]="films.isLoading">
-    <app-loader></app-loader>
-  </div>
+<div class="app__overlay" [class.visible]="films.isLoading">
+  <app-loader></app-loader>
+</div>
+
+<div class="app" *ngIf="!films.isLoading">
   <as-split direction="horizontal">
-    <as-split-area [size]="50">
+    <as-split-area [size]="70" [minSize]="15">
       <app-table></app-table>
     </as-split-area>
-    <as-split-area [size]="50">
+    <as-split-area [size]="30" [minSize]="15">
       <app-current-film></app-current-film>
     </as-split-area>
   </as-split>

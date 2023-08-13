@@ -1,1 +1,11 @@
-<p>current-film works!</p>
+<div class="wrapper">
+  <div class="block" *ngIf="films.currentFilm; else elseBlock">
+    <div class="block__image">
+      <img [src]="baseUrl + films.currentFilm.image.url" />
+    </div>
+    <h2>{{ films.currentFilm.nameRU }}</h2>
+    <p>{{ films.currentFilm.description }}</p>
+  </div>
+</div>
+
+<ng-template #elseBlock><h2>Выберите фильм</h2> </ng-template>

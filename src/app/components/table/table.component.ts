@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FilmsService } from 'src/app/services/films.service';
+import { Film } from 'src/app/types/Film';
 
 @Component({
   selector: 'app-table',
@@ -8,4 +9,8 @@ import { FilmsService } from 'src/app/services/films.service';
 })
 export class TableComponent {
   constructor(public films: FilmsService) {}
+
+  handleClick(item: Film) {
+    this.films.currentFilm = item;
+  }
 }

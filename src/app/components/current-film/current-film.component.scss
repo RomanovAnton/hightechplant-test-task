@@ -1,0 +1,27 @@
+.wrapper {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block {
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    min-height: 200px;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

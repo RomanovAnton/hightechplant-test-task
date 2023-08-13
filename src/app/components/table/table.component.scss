@@ -4,7 +4,7 @@
 }
 
 .table thead th {
-  background-color: grey;
+  background-color: rgb(178, 187, 221);
   position: sticky;
   top: 0px;
 }
@@ -21,10 +21,14 @@ td {
   cursor: pointer;
 }
 
-tr {
-  padding-left: 10px;
+td:first-child {
+  padding-left: 20px;
+}
+
+th:first-child {
+  padding-left: 20px;
 }
 
 tr:hover td {
-  background-color: grey;
+  background-color: rgb(178, 187, 221);
 }

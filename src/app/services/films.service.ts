@@ -15,15 +15,17 @@ export class FilmsService {
 
   getFilms() {
     this.isLoading = true;
-    this.http.get<Film[]>(environment.apiBaseUrl).subscribe({
-      next: (res) => {
-        this.films = res;
-        this.isLoading = false;
-      },
-      error: (err) => {
-        console.log(err);
-        this.isLoading = false;
-      },
-    });
+    this.http
+      .get<Film[]>(environment.apiBaseUrl + 'beatfilm-movies')
+      .subscribe({
+        next: (res) => {
+          this.films = res;
+          this.isLoading = false;
+        },
+        error: (err) => {
+          console.log(err);
+          this.isLoading = false;
+        },
+      });
   }
 }
