@@ -1,18 +1,22 @@
-<div class="table">
-  <div class="table__header">
-    <p>Номер</p>
-    <p>Название</p>
-    <p>Страна</p>
-    <p>Режиссер</p>
-    <p>Длительность</p>
-    <p>Год</p>
-  </div>
-  <div class="table__item" *ngFor="let item of films.films">
-    <p>{{ item.id }}</p>
-    <p>{{ item.nameRU }}</p>
-    <p>{{ item.country }}</p>
-    <p>{{ item.director }}</p>
-    <p>{{ item.duration }}</p>
-    <p>{{ item.year }}</p>
-  </div>
-</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Номер</th>
+      <th style="min-width: 200px">Название</th>
+      <th>Страна</th>
+      <th>Режиссер</th>
+      <th>Длительность</th>
+      <th>Год</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of films.films">
+      <td>{{ item.id }}</td>
+      <td>{{ item.nameRU }}</td>
+      <td>{{ item.country }}</td>
+      <td>{{ item.director }}</td>
+      <td>{{ item.duration }}</td>
+      <td>{{ item.year }}</td>
+    </tr>
+  </tbody>
+</table>
