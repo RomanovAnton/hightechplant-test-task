@@ -1,4 +1,7 @@
 <div class="app">
+  <div class="app__overlay" [class.visible]="films.isLoading">
+    <app-loader></app-loader>
+  </div>
   <as-split direction="horizontal">
     <as-split-area [size]="50">
       <app-table></app-table>

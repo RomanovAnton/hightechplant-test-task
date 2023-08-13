@@ -14,8 +14,16 @@ export class FilmsService {
   constructor(private http: HttpClient) {}
 
   getFilms() {
-    this.http
-      .get<Film[]>(environment.apiBaseUrl)
-      .subscribe((res) => (this.films = res));
+    this.isLoading = true;
+    this.http.get<Film[]>(environment.apiBaseUrl).subscribe({
+      next: (res) => {
+        this.films = res;
+        this.isLoading = false;
+      },
+      error: (err) => {
+        console.log(err);
+        this.isLoading = false;
+      },
+    });
   }
 }
