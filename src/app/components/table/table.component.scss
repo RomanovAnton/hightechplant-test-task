@@ -1,0 +1,13 @@
+@import "../../../scss/mixins";
+
+.table {
+  width: 100%;
+
+  &__header {
+    @include table;
+  }
+
+  &__item {
+    @include table;
+  }
+}

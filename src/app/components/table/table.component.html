@@ -1,0 +1,18 @@
+<div class="table">
+  <div class="table__header">
+    <p>Номер</p>
+    <p>Название</p>
+    <p>Страна</p>
+    <p>Режиссер</p>
+    <p>Длительность</p>
+    <p>Год</p>
+  </div>
+  <div class="table__item" *ngFor="let item of films.films">
+    <p>{{ item.id }}</p>
+    <p>{{ item.nameRU }}</p>
+    <p>{{ item.country }}</p>
+    <p>{{ item.director }}</p>
+    <p>{{ item.duration }}</p>
+    <p>{{ item.year }}</p>
+  </div>
+</div>
