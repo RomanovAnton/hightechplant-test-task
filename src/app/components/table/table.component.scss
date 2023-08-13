@@ -3,6 +3,12 @@
   padding: 16px;
 }
 
+.table thead th {
+  background-color: grey;
+  position: sticky;
+  top: 0px;
+}
+
 th,
 td {
   min-width: 150px;
