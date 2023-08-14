@@ -2,20 +2,22 @@
   <thead>
     <tr>
       <th>Номер</th>
-      <th >Название</th>
+      <th>Название</th>
       <th>Страна</th>
       <th>Режиссер</th>
-      <th>Длительность</th>
+      <th class="table__duration-col">Минуты</th>
       <th>Год</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let item of films.films" (click)="handleClick(item)">
       <td>{{ item.id }}</td>
-      <td style="padding-right: 30px">{{ item.nameRU }}</td>
+      <td class="table__title-col">{{ item.nameRU }}</td>
       <td>{{ item.country }}</td>
       <td>{{ item.director }}</td>
-      <td>{{ item.duration }}</td>
+      <td class="table__duration-col">
+        {{ item.duration }}
+      </td>
       <td>{{ item.year }}</td>
     </tr>
   </tbody>
